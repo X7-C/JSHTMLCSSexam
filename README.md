@@ -41,8 +41,8 @@ JavaScript (modular, external files)
 Public API: TheMealDB
 
 ## 📁 Project Structure
-pgsql
-Copy
+
+```plaintext
 good-food-mood/
 ├── index.html
 ├── search.html
@@ -57,6 +57,7 @@ good-food-mood/
 │   ├── recipeDetail.js
 │   ├── formValidation.js
 │   └── newsletterContent.js
+
 
 ## Contact
 Made with simplicity by X7-C
