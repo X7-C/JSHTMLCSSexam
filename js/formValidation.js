@@ -2,6 +2,8 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   const msg = document.getElementById('contact-message');
 
+  if (!form) return;
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = form['contact-name'].value.trim();
@@ -30,6 +32,8 @@ function initNewsletterForm() {
   const form = document.getElementById('newsletter-form');
   const msg = document.getElementById('newsletter-message');
 
+  if (!form) return;
+
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = form['name'].value.trim();
@@ -57,3 +61,8 @@ function validateEmail(email) {
   const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return pattern.test(email);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  initContactForm();
+  initNewsletterForm();
+});
