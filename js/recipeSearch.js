@@ -79,3 +79,5 @@ function initRecipeSearch() {
     window.location.href = 'recipe.html';
   };
 }
+
+document.addEventListener('DOMContentLoaded', initRecipeSearch);
