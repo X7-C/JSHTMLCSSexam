@@ -2,6 +2,8 @@ function initRecipeSearch() {
   const form = document.getElementById('recipe-form');
   const resultsContainer = document.getElementById('results');
 
+  if (!form || !resultsContainer) return;
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     resultsContainer.innerHTML = `<p>Searching recipes...</p>`;
@@ -31,6 +33,8 @@ function initRecipeSearch() {
             }
           }
         }
+
+        await new Promise(resolve => setTimeout(resolve, 300));
       }
 
       const requiredMatches = ingredientList.length;
@@ -40,6 +44,7 @@ function initRecipeSearch() {
         const filteredMeals = [];
 
         for (const meal of finalMeals) {
+          await new Promise(resolve => setTimeout(resolve, 300));
           const res = await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${meal.idMeal}`);
           const data = await res.json();
           const fullMeal = data.meals[0];

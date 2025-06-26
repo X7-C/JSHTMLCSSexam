@@ -34,10 +34,6 @@ async function loadRecipe() {
 
       <h3>Instructions</h3>
       <p>${meal.strInstructions}</p>
-
-      <div class="centered-button">
-        <a href="search.html" class="cta">← Back to Search</a>
-      </div>
     `;
   } catch (err) {
     container.innerHTML = "<p>Error loading recipe.</p>";
