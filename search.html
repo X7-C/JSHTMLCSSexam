@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Recipes | Good Food Mood</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Good Food Mood</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="search.html">Find Recipes</a>
+      <a href="newsletter.html">Newsletter</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="fade-in">Find Recipes</h2>
+    <form id="recipe-form" class="fade-in">
+      <label for="ingredients">Ingredients:</label>
+      <input type="text" id="ingredients" name="ingredients" required placeholder="e.g. chicken, garlic, onion">
+
+      <label for="diet">Dietary Preference:</label>
+      <select id="diet" name="diet">
+        <option value="">None</option>
+        <option value="vegan">Vegan</option>
+        <option value="vegetarian">Vegetarian</option>
+        <option value="gluten-free">Gluten-Free</option>
+      </select>
+
+      <button type="submit">Search</button>
+    </form>
+
+    <section id="results" class="fade-in"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Good Food Mood</p>
+  </footer>
+
+  <script src="js/formValidation.js" defer></script>
+  <script src="js/recipeSearch.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
